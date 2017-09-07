@@ -1,0 +1,15 @@
+<script type="text/javascript">
+
+  var eventbrite = 'eventbrite.nl';
+  var links = document.getElementsByTagName('a');
+
+  Array.prototype.forEach.call(links, function (link) {
+     if (link.href.indexOf(eventbrite) >= 0) {
+       if (link.href.indexOf('?') >= 0) {
+         link.href += '&_eboga=' + {{JS - Get GA Client ID}};
+       } else {
+         link.href += '?_eboga=' + {{JS - Get GA Client ID}};
+       }
+     }
+   });
+</script>
